@@ -178,7 +178,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
     endDay: 31,
     month: 9, // Oktober
     year: 2026, // 2026
-    agencyName: 'Semua Instansi (32)',
+    agencyName: 'Instansi Publik',
   });
 
   // Table search & Pagination 5 tiap halaman
@@ -216,7 +216,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
           ? true
           : dayVal >= Math.min(filters.startDay, filters.endDay) && dayVal <= Math.max(filters.startDay, filters.endDay);
       const matchesAgency =
-        filters.agencyName === 'Semua Instansi (32)' || s.agencyName === filters.agencyName;
+        filters.agencyName === 'Instansi Publik' ||
+        filters.agencyName === 'Semua Instansi (32)' ||
+        s.agencyName === filters.agencyName;
 
       const matchesSearch =
         !searchTerm ||
@@ -606,7 +608,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 onChange={(e) => setFilters({ ...filters, agencyName: e.target.value })}
                 className="input-3d px-3 py-2 sm:py-1.5 text-slate-900 font-bold w-full sm:flex-1 truncate text-xs"
               >
-                <option value="Semua Instansi (32)">Semua Instansi (32)</option>
+                <option value="Instansi Publik">Instansi Publik</option>
                 {agencies.map((agency, idx) => (
                   <option key={agency.id} value={agency.name}>
                     {idx + 1}. {agency.name}
@@ -1371,7 +1373,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             </div>
 
             {/* Active agency filter indicator */}
-            {filters.agencyName !== 'Semua Instansi (32)' && (
+            {filters.agencyName !== 'Instansi Publik' && filters.agencyName !== 'Semua Instansi (32)' && (
               <div className="px-5 sm:px-6 py-2.5 bg-blue-50/90 border-b border-blue-200 flex items-center justify-between text-xs text-blue-900 font-semibold flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <Building2 className="w-4 h-4 text-blue-600 shrink-0" />
@@ -1381,7 +1383,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 </div>
                 <button
                   type="button"
-                  onClick={() => setFilters({ ...filters, agencyName: 'Semua Instansi (32)' })}
+                  onClick={() => setFilters({ ...filters, agencyName: 'Instansi Publik' })}
                   className="px-2.5 py-1 rounded-lg bg-blue-200/80 hover:bg-blue-300 text-blue-950 text-[11px] font-bold cursor-pointer transition-all active:scale-95"
                 >
                   Tampilkan Semua Instansi Publik
@@ -1392,7 +1394,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             {/* Sub-info banner - Teks disamping kiri tombol paginasi */}
             <div className="px-3.5 sm:px-6 py-3 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs text-slate-600 font-medium">
               <span className="font-semibold text-slate-600 text-xs text-center sm:text-left">
-                Menampilkan penilaian oleh pemohon
+                Menampilkan Penilaian langsung dari masyarakat untuk inovasi pelayanan publik MPP Bojonegoro
               </span>
               <div className="flex items-center justify-center gap-1.5 sm:gap-2 shrink-0">
                 <button
@@ -1512,7 +1514,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
         {activeTab === 'saran' && (
           <div className="space-y-5">
             {/* Active agency filter indicator */}
-            {filters.agencyName !== 'Semua Instansi (32)' && (
+            {filters.agencyName !== 'Instansi Publik' && filters.agencyName !== 'Semua Instansi (32)' && (
               <div className="card-3d p-3.5 px-4 bg-blue-50/90 border-blue-200 flex items-center justify-between text-xs text-blue-900 font-semibold flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <Building2 className="w-4 h-4 text-blue-600 shrink-0" />
@@ -1522,7 +1524,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 </div>
                 <button
                   type="button"
-                  onClick={() => setFilters({ ...filters, agencyName: 'Semua Instansi (32)' })}
+                  onClick={() => setFilters({ ...filters, agencyName: 'Instansi Publik' })}
                   className="px-2.5 py-1 rounded-lg bg-blue-200/80 hover:bg-blue-300 text-blue-950 text-[11px] font-bold cursor-pointer transition-all active:scale-95"
                 >
                   Tampilkan Semua Instansi Publik

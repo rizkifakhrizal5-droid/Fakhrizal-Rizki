@@ -60,7 +60,7 @@ export default function App() {
     endDay: 31,
     month: 9, // October
     year: 2026,
-    agencyName: 'Semua Instansi (32)',
+    agencyName: 'Instansi Publik',
   });
 
   useEffect(() => {
@@ -303,7 +303,9 @@ export default function App() {
             : dayVal >= Math.min(activePrintFilters.startDay, activePrintFilters.endDay) &&
               dayVal <= Math.max(activePrintFilters.startDay, activePrintFilters.endDay);
         const matchesAgency =
-          activePrintFilters.agencyName === 'Semua Instansi (32)' || s.agencyName === activePrintFilters.agencyName;
+          activePrintFilters.agencyName === 'Instansi Publik' ||
+          activePrintFilters.agencyName === 'Semua Instansi (32)' ||
+          s.agencyName === activePrintFilters.agencyName;
 
         return matchesYear && matchesMonth && matchesDay && matchesAgency;
       })
@@ -335,7 +337,7 @@ export default function App() {
     setIsLoadingData(true);
     try {
       const newItems = await loadAndPersistNewSurveys(5);
-      setLoadDataToast(`Berhasil menambahkan ${newItems.length} data pemohon baru se-Indonesia dan tersimpan permanen di database Firestore!`);
+      setLoadDataToast('Berhasil menambahkan data pemohon baru dan tersimpan permanen!');
       setTimeout(() => {
         setLoadDataToast(null);
       }, 4500);

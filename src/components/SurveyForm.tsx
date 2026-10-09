@@ -691,13 +691,13 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
           >
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-2.5 sm:gap-3.5">
-                {/* 3D Step Coin */}
-                <div className="coin-3d w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center font-black text-sm sm:text-base shrink-0">
+                {/* Animasi Angka Penomoran 1 */}
+                <div className="step-number-animated step-number-animated-1 w-9 h-9 sm:w-10 sm:h-10 text-sm sm:text-base">
                   1
                 </div>
                 <div>
                   <h2 className="text-base sm:text-xl font-extrabold text-slate-900">
-                    1. Pemilihan Instansi Pelayanan Publik
+                    Pemilihan Instansi Pelayanan Publik
                   </h2>
                   <p className="text-[11px] sm:text-xs text-slate-500 font-medium">
                     Tentukan unit loket pelayanan yang Anda kunjungi hari ini
@@ -707,7 +707,7 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
 
               {/* 3D Badge */}
               <span className="text-[11px] sm:text-xs font-black px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-xl bg-blue-50 text-blue-700 border border-blue-200 shadow-[0_3px_0_0_#93c5fd]">
-                {activeAgencies.length} Instansi Terdaftar
+                Instansi Publik Yang Terdaftar Di Mpp
               </span>
             </div>
 
@@ -755,13 +755,14 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
             style={{ maxWidth: '1600px', width: '100%' }}
           >
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <div className="flex items-center gap-3.5">
-                <div className="coin-3d w-10 h-10 flex items-center justify-center font-black text-base shrink-0">
+              <div className="flex items-center gap-2.5 sm:gap-3.5">
+                {/* Animasi Angka Penomoran 2 */}
+                <div className="step-number-animated step-number-animated-2 w-9 h-9 sm:w-10 sm:h-10 text-sm sm:text-base">
                   2
                 </div>
                 <div>
                   <h2 className="text-base sm:text-lg font-extrabold text-slate-900">
-                    2. Penanggalan Layanan
+                    Penanggalan Layanan
                   </h2>
                   <p className="text-xs text-slate-500 font-medium">
                     Tentukan tanggal, bulan, dan tahun kunjungan pelayanan yang Anda nilai
@@ -884,13 +885,14 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
             style={{ maxWidth: '1600px', width: '100%' }}
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3.5">
-                <div className="coin-3d w-10 h-10 flex items-center justify-center font-black text-base shrink-0">
+              <div className="flex items-center gap-2.5 sm:gap-3.5">
+                {/* Animasi Angka Penomoran 3 */}
+                <div className="step-number-animated step-number-animated-3 w-9 h-9 sm:w-10 sm:h-10 text-sm sm:text-base">
                   3
                 </div>
                 <div>
                   <h2 className="text-lg sm:text-xl font-extrabold text-slate-900">
-                    3. Beri Rating &amp; 9 Unsur Pelayanan Publik
+                    Beri Rating &amp; 9 Unsur Pelayanan Publik
                   </h2>
                   <p className="text-xs text-slate-500 font-medium">
                     Sentuh bintang 1 sampai 5 untuk kepuasan umum, serta sesuaikan 9 unsur pelayanan publik
@@ -1113,12 +1115,13 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between flex-wrap gap-2">
-                <div className="flex items-center gap-3.5">
-                  <div className="coin-3d w-10 h-10 flex items-center justify-center font-black text-base shrink-0">
+                <div className="flex items-center gap-2.5 sm:gap-3.5">
+                  {/* Animasi Angka Penomoran 4 */}
+                  <div className="step-number-animated step-number-animated-4 w-9 h-9 sm:w-10 sm:h-10 text-sm sm:text-base">
                     4
                   </div>
                   <h2 className="text-lg sm:text-xl font-extrabold text-slate-900">
-                    4. Kolom Saran Singkat untuk Layanan Ini
+                    Kolom Saran Singkat untuk Layanan Ini
                   </h2>
                 </div>
 
@@ -1141,7 +1144,7 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
               </div>
 
               {/* Teks Deskripsi */}
-              <div className="pt-1 pl-0 sm:pl-[54px]">
+              <div className="pt-1 pl-0 sm:pl-[52px]">
                 <p className="text-xs text-slate-600 font-medium">
                   Aspirasi Anda khusus untuk pelayanan <strong className="text-slate-900">{selectedAgencyName}</strong>
                 </p>
@@ -1165,14 +1168,15 @@ export const SurveyForm: React.FC<SurveyFormProps> = ({
             style={{ maxWidth: '1600px', width: '100%' }}
           >
             <div className="flex items-center justify-between flex-wrap gap-3">
-              <div className="flex items-center gap-3.5">
-                <div className="coin-3d w-10 h-10 flex items-center justify-center font-black text-base shrink-0">
+              <div className="flex items-center gap-2.5 sm:gap-3.5">
+                {/* Animasi Angka Penomoran 5 */}
+                <div className="step-number-animated step-number-animated-5 w-9 h-9 sm:w-10 sm:h-10 text-sm sm:text-base">
                   5
                 </div>
                 <div>
                   <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 flex items-center gap-2">
                     <UserCheck className="w-5 h-5 text-blue-600" />
-                    5. Data Pemohon
+                    Data Pemohon
                   </h2>
                   <p className="text-xs text-slate-500 font-medium">
                     Identitas responden untuk validitas indeks mutu pelayanan

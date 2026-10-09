@@ -440,7 +440,10 @@ export function calculateIKMStats(
         ? true
         : dayNum >= Math.min(startDay, endDay) && dayNum <= Math.max(startDay, endDay);
     const matchesAgency =
-      !selectedAgency || selectedAgency === 'Semua Instansi (32)' || s.agencyName === selectedAgency;
+      !selectedAgency ||
+      selectedAgency === 'Instansi Publik' ||
+      selectedAgency === 'Semua Instansi (32)' ||
+      s.agencyName === selectedAgency;
 
     return matchesYear && matchesMonth && matchesDay && matchesAgency;
   });

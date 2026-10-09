@@ -135,7 +135,11 @@ export const RekapReportDocument: React.FC<RekapReportDocumentProps> = ({
     });
 
     // Filter if specific agency is selected
-    if (filters.agencyName && filters.agencyName !== 'Semua Instansi (32)') {
+    if (
+      filters.agencyName &&
+      filters.agencyName !== 'Instansi Publik' &&
+      filters.agencyName !== 'Semua Instansi (32)'
+    ) {
       return list.filter((a) => a.name === filters.agencyName);
     }
 

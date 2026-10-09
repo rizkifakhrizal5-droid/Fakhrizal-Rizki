@@ -332,7 +332,7 @@ export const ManageAgenciesModal: React.FC<ManageAgenciesModalProps> = ({
               title="Tambah Instansi Publik Baru"
             >
               <Plus className="w-3.5 h-3.5" />
-              <span>+ Tambah Instansi</span>
+              <span>Tambah Instansi</span>
             </button>
           )}
         </div>
@@ -373,7 +373,7 @@ export const ManageAgenciesModal: React.FC<ManageAgenciesModalProps> = ({
                       </div>
                       <div>
                         <h3 className="text-sm font-black text-blue-950">
-                          {isAddMode ? '+ Tambah Instansi Publik Baru' : 'Edit Instansi Publik'}
+                          {isAddMode ? 'Tambah Instansi Publik Baru' : 'Edit Instansi Publik'}
                         </h3>
                         <p className="text-[10px] text-blue-700 font-semibold">
                           Tersimpan permanen di cloud Firestore &amp; sinkron di seluruh perangkat
